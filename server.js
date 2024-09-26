@@ -10,6 +10,7 @@ dotenv.config();
 connect();
 
 app.get("/", async (req, res) => {
+  //api call
   const { data: datas } = await axios.get("http://localhost:9000/getdata");
   const titles = datas.map((data) => {
     return data.title;
